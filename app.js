@@ -22,8 +22,8 @@ function render(items) {
 }
 
 function applyFilter() {
-  const min = select.value;
-  const filtered = rooms.filter((room) => room.seats >= min && room.seats === min || min === "0");
+  const min = Number(select.value);
+  const filtered = rooms.filter((room) => room.seats >= min || min === 0);
   render(filtered);
 }
 
